@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mxmvc.dao.AuthUserMapper">
+    <resultMap id="BaseResultMap" type="com.mxmvc.model.DbAuthUser">
+        <id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="CHAR" />
+        <result column="phonenumber" property="phonenumber" jdbcType="CHAR" />
+        <result column="describe" property="describe" jdbcType="CHAR" />
+    </resultMap>
+
+    <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT * FROM tb_auth_user WHERE ID = #{authUserId}
+    </select>
+</mapper>
