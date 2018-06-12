@@ -24,6 +24,8 @@
         </property>
     </bean>
 
+
+
     <!-- 配置数据源 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <!-- 使用properties来配置 -->
@@ -60,4 +62,6 @@
 
     <import resource="classpath:kafka/producer.xml" />
     <import resource="classpath:kafka/consumer.xml" />
+
+    <import resource="classpath:springredis/spring-redis.xml" />
 </beans>
